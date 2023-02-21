@@ -1,0 +1,48 @@
+@use './../styles/variables';
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 20rem;
+    height: fit-content;
+    padding: variables.$m-01 ;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$m-01 ;
+    .field {
+        width: 100%;
+        input {
+            width: 100%;
+            padding: variables.$s-02;
+            border-radius: variables.$border-radius-xs;
+            border: 1px solid gray;
+            font-size: 0.97rem;
+            &:focus {
+                border: 1px solid var(--primary);
+            }
+        }
+    }
+
+    input[type='submit'] {
+        background-color: var(--primary);
+        border-radius: variables.$border-radius-xs;
+        padding: variables.$s-01;
+        color: #fff;
+    }
+}
